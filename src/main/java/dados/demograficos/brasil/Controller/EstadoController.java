@@ -15,9 +15,11 @@ import dados.demograficos.brasil.Service.*;
 public class EstadoController {
     
     private final EstadoService estadoService;
+    private final RegiaoService regiaoService;
 
-    public EstadoController(EstadoService estadoService) {
+    public EstadoController(EstadoService estadoService, RegiaoService regiaoService) {
         this.estadoService = estadoService;
+        this.regiaoService = regiaoService;
     }
 
     @GetMapping()
@@ -33,5 +35,10 @@ public class EstadoController {
     @GetMapping("/buscarsigla")
     public List<Estado> buscarSigla(@RequestParam String sigla){
         return estadoService.buscarSigla(sigla);
+    }
+
+    @GetMapping("/regiaonorte")
+    public List<Estado> regiaoNorte(){
+        return regiaoService.norte();
     }
 }
