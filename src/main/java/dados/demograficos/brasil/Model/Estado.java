@@ -4,14 +4,14 @@ public class Estado {
     private String nome;
     private String sigla;
     private double populacao;
-    private double pib;
+    private double pibEmBilhoes;
     private String regiao;
 
-    public Estado(String nome, String sigla, double populacao, double pib, String regiao) {
+    public Estado(String nome, String sigla, double populacao, double pibEmBilhoes, String regiao) {
         this.nome = nome;
         this.sigla = sigla;
         this.populacao = populacao;
-        this.pib = pib;
+        this.pibEmBilhoes = pibEmBilhoes;
         this.regiao = regiao;
     }
 
@@ -34,11 +34,11 @@ public class Estado {
         this.populacao = populacao;
     }
     public double getPib() {
-        return pib;
+        return pibEmBilhoes;
     }
-    public void setPib(double pib) {
-        this.pib = pib;
-    }
+    public void setPib(double pibEmBilhoes) {
+        this.pibEmBilhoes = pibEmBilhoes;
+    }  
 
     public String getRegiao() {
         return regiao;
