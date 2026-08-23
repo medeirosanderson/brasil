@@ -22,8 +22,27 @@ public class RegiaoService {
         .toList();
     }
 
-    public List<Estado> norte(){
-        return regiaoNorte();
+        public List<Estado> regiaoNordeste(){
+        return estadoService.todosEstados().stream()
+        .filter(estado -> estado.getRegiao().equalsIgnoreCase("Nordeste"))
+        .toList();
     }
 
+        public List<Estado> regiaoCentroOeste(){
+        return estadoService.todosEstados().stream()
+        .filter(estado -> estado.getRegiao().equalsIgnoreCase("Centro-Oeste"))
+        .toList();
+    }
+
+        public List<Estado> regiaoSudeste(){
+        return estadoService.todosEstados().stream()
+        .filter(estado -> estado.getRegiao().equalsIgnoreCase("Sudeste"))
+        .toList();
+    }
+
+        public List<Estado> regiaoSul(){
+        return estadoService.todosEstados().stream()
+        .filter(estado -> estado.getRegiao().equalsIgnoreCase("Sul"))
+        .toList();
+    }
 }
