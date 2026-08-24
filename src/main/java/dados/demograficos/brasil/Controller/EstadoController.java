@@ -11,7 +11,7 @@ import dados.demograficos.brasil.Model.Estado;
 import dados.demograficos.brasil.Service.*;
 
 @RestController
-@RequestMapping("/estados")
+@RequestMapping("/br")
 public class EstadoController {
     
     private final EstadoService estadoService;
@@ -25,12 +25,12 @@ public class EstadoController {
         return estadoService.todosEstados();
     }
 
-    @GetMapping("/buscarestado")
+    @GetMapping("/estado")
     public List<Estado> buscarEstados(@RequestParam String nome){
         return estadoService.buscarEstado(nome);
     }
 
-    @GetMapping("/buscarsigla")
+    @GetMapping("/sigla")
     public List<Estado> buscarSigla(@RequestParam String sigla){
         return estadoService.buscarSigla(sigla);
     }
